@@ -1,4 +1,6 @@
-const theme = {
+import {MD3Theme} from 'react-native-paper';
+
+export const theme: Partial<MD3Theme> = {
   colors: {
     primary: 'rgb(16, 109, 32)',
     onPrimary: 'rgb(255, 255, 255)',
@@ -42,5 +44,3 @@ const theme = {
     backdrop: 'rgba(44, 50, 42, 0.4)',
   },
 };
-
-export default theme;

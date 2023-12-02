@@ -9,11 +9,11 @@ import {MD3LightTheme as DefaultTheme, PaperProvider} from 'react-native-paper';
 import {RootStackParamList} from './src/routes';
 import {HomeScreen} from './src/screens/HomeScreen';
 import {MapScreen} from './src/screens/MapScreen';
-import customTheme from './theme';
+import {theme as customTheme} from './src/theme';
 
 const theme = {
   ...DefaultTheme,
-  ...customTheme.colors,
+  ...customTheme,
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -26,12 +26,24 @@ export function App(): JSX.Element {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{title: 'Home'}}
+            options={{
+              title: 'Home',
+              headerShown: false,
+              headerShadowVisible: false,
+              statusBarColor: 'transparent',
+              statusBarTranslucent: true,
+            }}
           />
           <Stack.Screen
             name="Map"
             component={MapScreen}
-            options={{title: 'Map'}}
+            options={{
+              title: 'Map',
+              headerShown: false,
+              headerShadowVisible: false,
+              statusBarColor: 'transparent',
+              statusBarTranslucent: true,
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>
