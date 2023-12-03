@@ -28,7 +28,9 @@ export function HomeScreen({navigation}: HomeScreenProps): JSX.Element {
         mode="contained"
         style={styles.signInButton}
         onPress={() => navigation.navigate('Map')}>
-        <Text style={styles.signInText}>Sign In</Text>
+        <Text variant="bodyLarge" style={styles.signInText}>
+          Sign In
+        </Text>
       </Button>
     </Surface>
   );
@@ -58,7 +60,5 @@ const styles = StyleSheet.create({
   },
   signInText: {
     color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
   },
 });
