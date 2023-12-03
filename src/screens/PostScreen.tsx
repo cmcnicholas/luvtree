@@ -17,7 +17,7 @@ export function PostScreen({navigation, route}: PostScreenProps): JSX.Element {
 
   const posts = useAppSelector(state => state.map.posts);
   const post = useMemo(
-    () => posts.find(p => p.id === route.params.post.id),
+    () => posts.find(p => p.id === route.params.id),
     [posts, route.params],
   );
   const [scaleValue] = useState(new Animated.Value(1));

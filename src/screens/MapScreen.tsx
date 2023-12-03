@@ -20,7 +20,7 @@ export function MapScreen({navigation}: MapScreenProps): JSX.Element {
 
   const onPostPress = (post: PostModel) => {
     navigation.push('Post', {
-      post,
+      id: post.id,
     });
   };
 
