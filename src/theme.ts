@@ -1,6 +1,13 @@
-import {MD3Theme} from 'react-native-paper';
+import {MD3Theme, configureFonts} from 'react-native-paper';
 
 export const theme: Partial<MD3Theme> = {
+  roundness: 10,
+  fonts: configureFonts({
+    config: {
+      fontFamily: 'Lobster-Regular',
+      fontWeight: '400',
+    },
+  }),
   colors: {
     primary: 'rgb(16, 109, 32)',
     onPrimary: 'rgb(255, 255, 255)',
