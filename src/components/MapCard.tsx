@@ -6,7 +6,7 @@ import {formatTimeAgo} from '../formatters/TimeAgo';
 type MapCardProps = {
   title: string;
   user: string;
-  date: Date;
+  date: string;
   source: ImageSourcePropType;
 };
 
@@ -28,7 +28,7 @@ export function MapCard({
           {user}
         </Text>
         <Text variant="bodyMedium" style={styles.date}>
-          {formatTimeAgo(date)}
+          {formatTimeAgo(new Date(date))}
         </Text>
       </Card.Content>
       <Card.Cover source={source} style={styles.cover} />
