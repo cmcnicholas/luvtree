@@ -4,6 +4,7 @@ import React from 'react';
 import {MD3LightTheme as DefaultTheme, PaperProvider} from 'react-native-paper';
 import {Provider as ReduxProvider} from 'react-redux';
 import {RootStackParamList} from './src/routes';
+import {CreateScreen} from './src/screens/CreateScreen';
 import {HomeScreen} from './src/screens/HomeScreen';
 import {MapScreen} from './src/screens/MapScreen';
 import {PostScreen} from './src/screens/PostScreen';
@@ -48,6 +49,13 @@ export function App(): JSX.Element {
             <Stack.Screen
               name="Post"
               component={PostScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="Create"
+              component={CreateScreen}
               options={{
                 headerShown: false,
               }}

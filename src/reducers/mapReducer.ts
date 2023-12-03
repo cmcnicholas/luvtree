@@ -25,8 +25,11 @@ const mapSlice = createSlice({
       }
       state.posts = state.posts;
     },
+    addPost: (state, action: PayloadAction<PostModel>) => {
+      state.posts.push(action.payload);
+    },
   },
 });
 
-export const {loadPosts, likePost} = mapSlice.actions;
+export const {loadPosts, likePost, addPost} = mapSlice.actions;
 export const reducer = mapSlice.reducer;

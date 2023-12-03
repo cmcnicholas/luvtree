@@ -6,6 +6,10 @@ export type RootStackParamList = {
   Post: {
     id: string;
   };
+  Create: {
+    lat: number;
+    lng: number;
+  };
 };
 
 export type HomeScreenProps = NativeStackScreenProps<
@@ -18,4 +22,9 @@ export type MapScreenProps = NativeStackScreenProps<RootStackParamList, 'Map'>;
 export type PostScreenProps = NativeStackScreenProps<
   RootStackParamList,
   'Post'
+>;
+
+export type CreateScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Create'
 >;

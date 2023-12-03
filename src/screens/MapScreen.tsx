@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {FlatList, Image, StyleSheet, View} from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+import MapView, {LongPressEvent, Marker} from 'react-native-maps';
 import {mapStyle} from '../assets/mapStyle';
 import {MapCard} from '../components/MapCard';
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -24,6 +24,14 @@ export function MapScreen({navigation}: MapScreenProps): JSX.Element {
     });
   };
 
+  const onMapLongPress = (event: LongPressEvent) => {
+    const coordinate = event.nativeEvent.coordinate;
+    navigation.push('Create', {
+      lat: coordinate.latitude,
+      lng: coordinate.longitude,
+    });
+  };
+
   return (
     <View style={styles.container}>
       {/* Google Map */}
@@ -35,7 +43,8 @@ export function MapScreen({navigation}: MapScreenProps): JSX.Element {
           longitudeDelta: 0.0421,
         }}
         style={styles.map}
-        customMapStyle={mapStyle}>
+        customMapStyle={mapStyle}
+        onLongPress={onMapLongPress}>
         {posts.map(post => (
           <Marker
             key={post.id}
