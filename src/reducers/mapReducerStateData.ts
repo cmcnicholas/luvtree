@@ -12,6 +12,7 @@ export const posts: PostModel[] = [
       latitude: 37.78865,
       longitude: -122.4394,
     },
+    likes: 34,
   },
   {
     id: '2',
@@ -23,6 +24,7 @@ export const posts: PostModel[] = [
       latitude: 37.78425,
       longitude: -122.4124,
     },
+    likes: 12,
   },
   {
     id: '3',
@@ -34,6 +36,7 @@ export const posts: PostModel[] = [
       latitude: 37.78525,
       longitude: -122.4524,
     },
+    likes: 0,
   },
   {
     id: '4',
@@ -45,6 +48,7 @@ export const posts: PostModel[] = [
       latitude: 37.78625,
       longitude: -122.4364,
     },
+    likes: 156,
   },
   {
     id: '5',
@@ -56,6 +60,7 @@ export const posts: PostModel[] = [
       latitude: 37.79725,
       longitude: -122.4374,
     },
+    likes: 1,
   },
   {
     id: '6',
@@ -67,6 +72,7 @@ export const posts: PostModel[] = [
       latitude: 37.78525,
       longitude: -122.4224,
     },
+    likes: 0,
   },
   {
     id: '7',
@@ -78,6 +84,7 @@ export const posts: PostModel[] = [
       latitude: 37.78125,
       longitude: -122.4374,
     },
+    likes: 1589,
   },
   {
     id: '8',
@@ -89,6 +96,7 @@ export const posts: PostModel[] = [
       latitude: 37.79825,
       longitude: -122.3324,
     },
+    likes: 87,
   },
   {
     id: '9',
@@ -100,6 +108,7 @@ export const posts: PostModel[] = [
       latitude: 37.72825,
       longitude: -122.1324,
     },
+    likes: 13,
   },
   // Add more data as needed
 ];

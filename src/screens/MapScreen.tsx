@@ -18,9 +18,10 @@ export function MapScreen({navigation}: MapScreenProps): JSX.Element {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const onMarkerPress = (post: PostModel) => {
-    post.id; // TODO
-    navigation.navigate('Home');
+  const onPostPress = (post: PostModel) => {
+    navigation.push('Post', {
+      post,
+    });
   };
 
   return (
@@ -40,7 +41,7 @@ export function MapScreen({navigation}: MapScreenProps): JSX.Element {
             key={post.id}
             coordinate={post.lonLat}
             image={require('../assets/images/map_icon.png')}
-            onPress={() => onMarkerPress(post)}
+            onPress={() => onPostPress(post)}
           />
         ))}
       </MapView>
@@ -67,6 +68,7 @@ export function MapScreen({navigation}: MapScreenProps): JSX.Element {
             user={item.user}
             date={item.date}
             source={item.image}
+            onPress={() => onPostPress(item)}
           />
         )}
         style={styles.cards}

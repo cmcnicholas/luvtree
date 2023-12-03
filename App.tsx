@@ -6,6 +6,7 @@ import {Provider as ReduxProvider} from 'react-redux';
 import {RootStackParamList} from './src/routes';
 import {HomeScreen} from './src/screens/HomeScreen';
 import {MapScreen} from './src/screens/MapScreen';
+import {PostScreen} from './src/screens/PostScreen';
 import {store} from './src/store';
 import {theme as customTheme} from './src/theme';
 
@@ -42,6 +43,13 @@ export function App(): JSX.Element {
                 headerShadowVisible: false,
                 statusBarColor: 'transparent',
                 statusBarTranslucent: true,
+              }}
+            />
+            <Stack.Screen
+              name="Post"
+              component={PostScreen}
+              options={{
+                headerShown: false,
               }}
             />
           </Stack.Navigator>

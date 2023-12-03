@@ -10,4 +10,5 @@ export type PostModel = {
     latitude: number;
     longitude: number;
   };
+  likes: number;
 };

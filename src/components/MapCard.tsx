@@ -8,6 +8,7 @@ type MapCardProps = {
   user: string;
   date: string;
   source: ImageSourcePropType;
+  onPress: () => void;
 };
 
 export function MapCard({
@@ -15,9 +16,10 @@ export function MapCard({
   user,
   date,
   source,
+  onPress,
 }: MapCardProps): JSX.Element {
   return (
-    <Card mode="elevated" style={styles.card}>
+    <Card mode="elevated" style={styles.card} onPress={onPress}>
       <Card.Title
         title={`“${title}”`}
         titleVariant="titleLarge"
