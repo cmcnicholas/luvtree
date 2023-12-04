@@ -3,6 +3,22 @@
 We love trees 🌲🌳🌴 show others you do too! Post to the community and vote up your favourite ferns, take a photo with
 a curious connifer or just find out where to go see all the beautiful birch's!
 
-![Alllrigh-tree Then!](https://media0.giphy.com/media/4WETSZorqo7FGNBDAT/giphy.gif?cid=ecf05e47j2iag7nyy1qv28p76l4xath2g7plv7aeoz5wjwot&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+![Alllrigh-tree Then!](preview.webp)
 
 _LuvTree is a fake app, just a bit of fun to learn react native_
+
+## Setup Maps Key
+
+To get the maps to work you will need an api key for Google maps,
+[it's free, go create one in GCP](https://console.cloud.google.com/apis/library).
+
+Once done, you can add the key in the `android/app/src/main/AndroidManifest.xml` as:
+
+```xml
+<application ...>
+  <meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="YOUR MAP KEY HERE"/>
+</application>
+```
+
